@@ -1,0 +1,6 @@
+*.zip
+*.crdownload
+venv/
+.venv/
+__pycache__/
+*.pyc

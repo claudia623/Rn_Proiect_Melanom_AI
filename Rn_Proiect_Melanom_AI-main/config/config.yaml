@@ -1,0 +1,51 @@
+# ============================================
+# Configurare Proiect Melanom AI
+# ============================================
+
+# Configurare date
+data:
+  raw_path: "data/raw"
+  processed_path: "data/processed"
+  train_path: "data/train"
+  validation_path: "data/validation"
+  test_path: "data/test"
+  
+# Parametri imagine
+image:
+  width: 224
+  height: 224
+  channels: 3
+  
+# Împărțire dataset
+split:
+  train_ratio: 0.7
+  validation_ratio: 0.15
+  test_ratio: 0.15
+
+# Parametri antrenare
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  early_stopping_patience: 10
+  
+# Augmentare date
+augmentation:
+  rotation_range: 20
+  width_shift_range: 0.2
+  height_shift_range: 0.2
+  horizontal_flip: true
+  vertical_flip: true
+  zoom_range: 0.2
+  
+# Model
+model:
+  architecture: "EfficientNetB0"  # Opțiuni: VGG16, ResNet50, EfficientNetB0
+  pretrained_weights: "imagenet"
+  dropout_rate: 0.5
+  
+# Căi salvare
+paths:
+  models: "models"
+  logs: "logs"
+  results: "results"

@@ -1,0 +1,41 @@
+# ============================================
+# Melanom AI - Dependențe Python
+# ============================================
+
+# Deep Learning Framework
+tensorflow>=2.15.0
+keras>=3.0.0
+
+# Procesare imagini
+opencv-python>=4.8.0
+Pillow>=10.0.0
+scikit-image>=0.22.0
+
+# Analiza datelor și vizualizare
+numpy>=1.26.0
+pandas>=2.1.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Machine Learning utilities
+scikit-learn>=1.3.0
+
+# Jupyter notebooks
+jupyter>=1.0.0
+notebook>=7.0.0
+ipykernel>=6.25.0
+
+# Configurare
+pyyaml>=6.0.1
+python-dotenv>=1.0.0
+
+# Utilități
+tqdm>=4.66.0
+requests>=2.31.0
+albumentations>=1.3.1
+
+# Evaluare modele
+tensorboard>=2.15.0
+
+# Opțional - GPU support (decomentează dacă ai CUDA)
+# tensorflow-gpu>=2.15.0
