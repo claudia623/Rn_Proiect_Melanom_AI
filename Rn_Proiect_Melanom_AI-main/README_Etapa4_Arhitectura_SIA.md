@@ -3,7 +3,7 @@
 **Disciplina:** Rețele Neuronale  
 **Instituție:** POLITEHNICA București – FIIR  
 **Student:** Dumitru Claudia-Stefania  
-**Data:** 09.12.2025  
+**Data:** 09.12.2025 (Decembrie 2025) 
 
 ---
 
