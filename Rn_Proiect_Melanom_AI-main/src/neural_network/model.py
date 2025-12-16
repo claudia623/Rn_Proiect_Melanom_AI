@@ -6,8 +6,8 @@ Definirea arhitecturii rețelei neuronale pentru clasificarea melanomului
 
 import tensorflow as tf
 from tensorflow import keras
-from keras import layers, Model
-from keras.applications import (
+from tensorflow.keras import layers, Model
+from tensorflow.keras.applications import (
     VGG16, 
     ResNet50, 
     EfficientNetB0, 

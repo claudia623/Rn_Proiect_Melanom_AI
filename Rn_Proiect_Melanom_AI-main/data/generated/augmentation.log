@@ -1,0 +1,444 @@
+2025-12-16 14:22:50,777 - INFO - ======================================================================
+2025-12-16 14:22:50,777 - INFO - MODUL 1: DATA ACQUISITION - SYNTHETIC DATA GENERATION
+2025-12-16 14:22:50,778 - INFO - ======================================================================
+2025-12-16 14:22:50,778 - INFO - Loaded 30 images from data/raw/
+2025-12-16 14:22:50,778 - INFO - Processing 30 original images...
+2025-12-16 14:22:50,783 - INFO - Loaded 64 images from data/raw/
+2025-12-16 14:22:50,807 - ERROR - Failed to augment ISIC_0000000.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,821 - INFO - Generated: data/generated/original/benign\ISIC_0000000_aug_2.jpg (color)
+2025-12-16 14:22:50,840 - ERROR - Failed to augment ISIC_0000001.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,844 - INFO - Generated: data/generated/original/benign\ISIC_0000001_aug_2.jpg (color)
+2025-12-16 14:22:50,861 - ERROR - Failed to augment ISIC_0000003.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,881 - INFO - Generated: data/generated/original/benign\ISIC_0000003_aug_2.jpg (color)
+2025-12-16 14:22:50,900 - ERROR - Failed to augment ISIC_0000005.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,908 - INFO - Generated: data/generated/original/benign\ISIC_0000005_aug_2.jpg (color)
+2025-12-16 14:22:50,927 - ERROR - Failed to augment ISIC_0000006.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,933 - INFO - Generated: data/generated/original/benign\ISIC_0000006_aug_2.jpg (color)
+2025-12-16 14:22:50,953 - ERROR - Failed to augment ISIC_0000007.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,955 - INFO - Generated: data/generated/original/benign\ISIC_0000007_aug_2.jpg (color)
+2025-12-16 14:22:50,972 - ERROR - Failed to augment ISIC_0000008.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:50,974 - INFO - Generated: data/generated/original/benign\ISIC_0000008_aug_2.jpg (color)
+2025-12-16 14:22:50,993 - ERROR - Failed to augment ISIC_0000009.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,000 - INFO - Generated: data/generated/original/benign\ISIC_0000009_aug_2.jpg (color)
+2025-12-16 14:22:51,019 - ERROR - Failed to augment ISIC_0000010.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,021 - INFO - Generated: data/generated/original/benign\ISIC_0000010_aug_2.jpg (color)
+2025-12-16 14:22:51,038 - ERROR - Failed to augment ISIC_0000011.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,041 - INFO - Generated: data/generated/original/benign\ISIC_0000011_aug_2.jpg (color)
+2025-12-16 14:22:51,057 - ERROR - Failed to augment ISIC_0000012.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,059 - INFO - Generated: data/generated/original/benign\ISIC_0000012_aug_2.jpg (color)
+2025-12-16 14:22:51,077 - ERROR - Failed to augment ISIC_0000014.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,083 - INFO - Generated: data/generated/original/benign\ISIC_0000014_aug_2.jpg (color)
+2025-12-16 14:22:51,103 - ERROR - Failed to augment ISIC_0000015.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,106 - INFO - Generated: data/generated/original/benign\ISIC_0000015_aug_2.jpg (color)
+2025-12-16 14:22:51,125 - ERROR - Failed to augment ISIC_0000016.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,128 - INFO - Generated: data/generated/original/benign\ISIC_0000016_aug_2.jpg (color)
+2025-12-16 14:22:51,154 - ERROR - Failed to augment ISIC_0000017.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,156 - INFO - Generated: data/generated/original/benign\ISIC_0000017_aug_2.jpg (color)
+2025-12-16 14:22:51,176 - ERROR - Failed to augment ISIC_0000018.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,178 - INFO - Generated: data/generated/original/benign\ISIC_0000018_aug_2.jpg (color)
+2025-12-16 14:22:51,204 - ERROR - Failed to augment ISIC_0000019.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,208 - INFO - Generated: data/generated/original/benign\ISIC_0000019_aug_2.jpg (color)
+2025-12-16 14:22:51,232 - ERROR - Failed to augment ISIC_0000020.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,250 - INFO - Generated: data/generated/original/benign\ISIC_0000020_aug_2.jpg (color)
+2025-12-16 14:22:51,277 - ERROR - Failed to augment ISIC_0000021.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,295 - INFO - Generated: data/generated/original/benign\ISIC_0000021_aug_2.jpg (color)
+2025-12-16 14:22:51,332 - ERROR - Failed to augment ISIC_0000023.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,338 - INFO - Generated: data/generated/original/benign\ISIC_0000023_aug_2.jpg (color)
+2025-12-16 14:22:51,370 - ERROR - Failed to augment ISIC_0000024.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,389 - INFO - Generated: data/generated/original/benign\ISIC_0000024_aug_2.jpg (color)
+2025-12-16 14:22:51,417 - ERROR - Failed to augment ISIC_0000025.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,420 - INFO - Generated: data/generated/original/benign\ISIC_0000025_aug_2.jpg (color)
+2025-12-16 14:22:51,452 - ERROR - Failed to augment ISIC_0000027.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,476 - INFO - Generated: data/generated/original/benign\ISIC_0000027_aug_2.jpg (color)
+2025-12-16 14:22:51,518 - ERROR - Failed to augment ISIC_0000028.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,522 - INFO - Generated: data/generated/original/benign\ISIC_0000028_aug_2.jpg (color)
+2025-12-16 14:22:51,551 - ERROR - Failed to augment ISIC_0000032.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,556 - INFO - Generated: data/generated/original/benign\ISIC_0000032_aug_2.jpg (color)
+2025-12-16 14:22:51,584 - ERROR - Failed to augment ISIC_0000033.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,586 - INFO - Generated: data/generated/original/benign\ISIC_0000033_aug_2.jpg (color)
+2025-12-16 14:22:51,606 - ERROR - Failed to augment ISIC_0000034.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,611 - INFO - Generated: data/generated/original/benign\ISIC_0000034_aug_2.jpg (color)
+2025-12-16 14:22:51,637 - ERROR - Failed to augment ISIC_0000037.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,639 - INFO - Generated: data/generated/original/benign\ISIC_0000037_aug_2.jpg (color)
+2025-12-16 14:22:51,662 - ERROR - Failed to augment ISIC_0000038.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,668 - INFO - Generated: data/generated/original/benign\ISIC_0000038_aug_2.jpg (color)
+2025-12-16 14:22:51,688 - ERROR - Failed to augment ISIC_0000039.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,691 - INFO - Generated: data/generated/original/benign\ISIC_0000039_aug_2.jpg (color)
+2025-12-16 14:22:51,719 - ERROR - Failed to augment ISIC_0000041.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,722 - INFO - Generated: data/generated/original/benign\ISIC_0000041_aug_2.jpg (color)
+2025-12-16 14:22:51,743 - ERROR - Failed to augment ISIC_0000042.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,752 - INFO - Generated: data/generated/original/benign\ISIC_0000042_aug_2.jpg (color)
+2025-12-16 14:22:51,773 - ERROR - Failed to augment ISIC_0000002.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,785 - INFO - Generated: data/generated/original/malignant\ISIC_0000002_aug_2.jpg (color)
+2025-12-16 14:22:51,803 - ERROR - Failed to augment ISIC_0000004.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,807 - INFO - Generated: data/generated/original/malignant\ISIC_0000004_aug_2.jpg (color)
+2025-12-16 14:22:51,827 - ERROR - Failed to augment ISIC_0000013.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,835 - INFO - Generated: data/generated/original/malignant\ISIC_0000013_aug_2.jpg (color)
+2025-12-16 14:22:51,865 - ERROR - Failed to augment ISIC_0000022.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,869 - INFO - Generated: data/generated/original/malignant\ISIC_0000022_aug_2.jpg (color)
+2025-12-16 14:22:51,893 - ERROR - Failed to augment ISIC_0000026.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,897 - INFO - Generated: data/generated/original/malignant\ISIC_0000026_aug_2.jpg (color)
+2025-12-16 14:22:51,921 - ERROR - Failed to augment ISIC_0000029.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,926 - INFO - Generated: data/generated/original/malignant\ISIC_0000029_aug_2.jpg (color)
+2025-12-16 14:22:51,953 - ERROR - Failed to augment ISIC_0000030.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,955 - INFO - Generated: data/generated/original/malignant\ISIC_0000030_aug_2.jpg (color)
+2025-12-16 14:22:51,978 - ERROR - Failed to augment ISIC_0000031.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:51,984 - INFO - Generated: data/generated/original/malignant\ISIC_0000031_aug_2.jpg (color)
+2025-12-16 14:22:52,008 - ERROR - Failed to augment ISIC_0000035.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,011 - INFO - Generated: data/generated/original/malignant\ISIC_0000035_aug_2.jpg (color)
+2025-12-16 14:22:52,043 - ERROR - Failed to augment ISIC_0000036.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,053 - INFO - Generated: data/generated/original/malignant\ISIC_0000036_aug_2.jpg (color)
+2025-12-16 14:22:52,075 - ERROR - Failed to augment ISIC_0000040.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,078 - INFO - Generated: data/generated/original/malignant\ISIC_0000040_aug_2.jpg (color)
+2025-12-16 14:22:52,103 - ERROR - Failed to augment ISIC_0000043.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,105 - INFO - Generated: data/generated/original/malignant\ISIC_0000043_aug_2.jpg (color)
+2025-12-16 14:22:52,134 - ERROR - Failed to augment ISIC_0000046.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,138 - INFO - Generated: data/generated/original/malignant\ISIC_0000046_aug_2.jpg (color)
+2025-12-16 14:22:52,158 - ERROR - Failed to augment ISIC_0000049.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,160 - INFO - Generated: data/generated/original/malignant\ISIC_0000049_aug_2.jpg (color)
+2025-12-16 14:22:52,176 - ERROR - Failed to augment ISIC_0000054.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,193 - INFO - Generated: data/generated/original/malignant\ISIC_0000054_aug_2.jpg (color)
+2025-12-16 14:22:52,219 - ERROR - Failed to augment ISIC_0000056.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,221 - INFO - Generated: data/generated/original/malignant\ISIC_0000056_aug_2.jpg (color)
+2025-12-16 14:22:52,238 - ERROR - Failed to augment ISIC_0000070.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,240 - INFO - Generated: data/generated/original/malignant\ISIC_0000070_aug_2.jpg (color)
+2025-12-16 14:22:52,256 - ERROR - Failed to augment ISIC_0000074.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,258 - INFO - Generated: data/generated/original/malignant\ISIC_0000074_aug_2.jpg (color)
+2025-12-16 14:22:52,282 - ERROR - Failed to augment ISIC_0000076.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,285 - INFO - Generated: data/generated/original/malignant\ISIC_0000076_aug_2.jpg (color)
+2025-12-16 14:22:52,307 - ERROR - Failed to augment ISIC_0000077.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,311 - INFO - Generated: data/generated/original/malignant\ISIC_0000077_aug_2.jpg (color)
+2025-12-16 14:22:52,340 - ERROR - Failed to augment ISIC_0000078.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,343 - INFO - Generated: data/generated/original/malignant\ISIC_0000078_aug_2.jpg (color)
+2025-12-16 14:22:52,412 - ERROR - Failed to augment ISIC_0000139.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,419 - INFO - Generated: data/generated/original/malignant\ISIC_0000139_aug_2.jpg (color)
+2025-12-16 14:22:52,467 - ERROR - Failed to augment ISIC_0000140.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,539 - INFO - Generated: data/generated/original/malignant\ISIC_0000140_aug_2.jpg (color)
+2025-12-16 14:22:52,573 - ERROR - Failed to augment ISIC_0000141.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,617 - INFO - Generated: data/generated/original/malignant\ISIC_0000141_aug_2.jpg (color)
+2025-12-16 14:22:52,650 - ERROR - Failed to augment ISIC_0000142.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,653 - INFO - Generated: data/generated/original/malignant\ISIC_0000142_aug_2.jpg (color)
+2025-12-16 14:22:52,692 - ERROR - Failed to augment ISIC_0000143.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,705 - INFO - Generated: data/generated/original/malignant\ISIC_0000143_aug_2.jpg (color)
+2025-12-16 14:22:52,736 - ERROR - Failed to augment ISIC_0000144.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,783 - INFO - Generated: data/generated/original/malignant\ISIC_0000144_aug_2.jpg (color)
+2025-12-16 14:22:52,835 - ERROR - Failed to augment ISIC_0000145.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,837 - INFO - Generated: data/generated/original/malignant\ISIC_0000145_aug_2.jpg (color)
+2025-12-16 14:22:52,870 - ERROR - Failed to augment ISIC_0000146.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,877 - INFO - Generated: data/generated/original/malignant\ISIC_0000146_aug_2.jpg (color)
+2025-12-16 14:22:52,911 - ERROR - Failed to augment ISIC_0000147.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:52,942 - INFO - Generated: data/generated/original/malignant\ISIC_0000147_aug_2.jpg (color)
+2025-12-16 14:22:52,990 - ERROR - Failed to augment ISIC_0000148.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:53,003 - INFO - Generated: data/generated/original/malignant\ISIC_0000148_aug_2.jpg (color)
+2025-12-16 14:22:53,042 - ERROR - Failed to augment ISIC_0000149.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:22:53,049 - INFO - Generated: data/generated/original/malignant\ISIC_0000149_aug_2.jpg (color)
+2025-12-16 14:22:53,083 - INFO - Metadata saved to data/generated/original/metadata.csv
+2025-12-16 14:22:53,086 - INFO - Augmentation log saved to data/generated/original/augmentation_log.json
+2025-12-16 14:22:53,100 - INFO - 
+======================================================================
+2025-12-16 14:22:53,100 - INFO - DATASET STATISTICS
+2025-12-16 14:22:53,101 - INFO - ======================================================================
+2025-12-16 14:22:53,101 - INFO - Total images: 94
+2025-12-16 14:22:53,101 - INFO - Original images: 30 (31.9%)
+2025-12-16 14:22:53,101 - INFO - Generated images: 64 (68.1%)
+2025-12-16 14:22:53,101 - INFO - Class distribution: {'benign': 32, 'malignant': 32}
+2025-12-16 14:22:53,102 - INFO - Augmentation types: {'color': 64}
+2025-12-16 14:22:53,107 - INFO - 
+Statistics saved to data/generated/original/generation_statistics.csv
+2025-12-16 14:22:53,108 - INFO - Output directory: data/generated/original/
+2025-12-16 14:23:02,437 - INFO - ======================================================================
+2025-12-16 14:23:02,437 - INFO - MODUL 1: DATA ACQUISITION - SYNTHETIC DATA GENERATION
+2025-12-16 14:23:02,437 - INFO - ======================================================================
+2025-12-16 14:23:02,438 - INFO - Loaded 30 images from data/raw/
+2025-12-16 14:23:02,438 - INFO - Processing 30 original images...
+2025-12-16 14:23:02,439 - INFO - Loaded 64 images from data/raw/
+2025-12-16 14:23:02,443 - ERROR - Failed to augment ISIC_0000000.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,452 - INFO - Generated: data/generated/original/benign\ISIC_0000000_aug_2.jpg (color)
+2025-12-16 14:23:02,455 - ERROR - Failed to augment ISIC_0000001.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,456 - INFO - Generated: data/generated/original/benign\ISIC_0000001_aug_2.jpg (color)
+2025-12-16 14:23:02,459 - ERROR - Failed to augment ISIC_0000003.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,460 - INFO - Generated: data/generated/original/benign\ISIC_0000003_aug_2.jpg (color)
+2025-12-16 14:23:02,466 - ERROR - Failed to augment ISIC_0000005.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,468 - INFO - Generated: data/generated/original/benign\ISIC_0000005_aug_2.jpg (color)
+2025-12-16 14:23:02,471 - ERROR - Failed to augment ISIC_0000006.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,475 - INFO - Generated: data/generated/original/benign\ISIC_0000006_aug_2.jpg (color)
+2025-12-16 14:23:02,478 - ERROR - Failed to augment ISIC_0000007.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,482 - INFO - Generated: data/generated/original/benign\ISIC_0000007_aug_2.jpg (color)
+2025-12-16 14:23:02,485 - ERROR - Failed to augment ISIC_0000008.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,487 - INFO - Generated: data/generated/original/benign\ISIC_0000008_aug_2.jpg (color)
+2025-12-16 14:23:02,489 - ERROR - Failed to augment ISIC_0000009.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,497 - INFO - Generated: data/generated/original/benign\ISIC_0000009_aug_2.jpg (color)
+2025-12-16 14:23:02,502 - ERROR - Failed to augment ISIC_0000010.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,504 - INFO - Generated: data/generated/original/benign\ISIC_0000010_aug_2.jpg (color)
+2025-12-16 14:23:02,507 - ERROR - Failed to augment ISIC_0000011.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,509 - INFO - Generated: data/generated/original/benign\ISIC_0000011_aug_2.jpg (color)
+2025-12-16 14:23:02,515 - ERROR - Failed to augment ISIC_0000012.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,518 - INFO - Generated: data/generated/original/benign\ISIC_0000012_aug_2.jpg (color)
+2025-12-16 14:23:02,520 - ERROR - Failed to augment ISIC_0000014.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,523 - INFO - Generated: data/generated/original/benign\ISIC_0000014_aug_2.jpg (color)
+2025-12-16 14:23:02,525 - ERROR - Failed to augment ISIC_0000015.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,527 - INFO - Generated: data/generated/original/benign\ISIC_0000015_aug_2.jpg (color)
+2025-12-16 14:23:02,533 - ERROR - Failed to augment ISIC_0000016.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,535 - INFO - Generated: data/generated/original/benign\ISIC_0000016_aug_2.jpg (color)
+2025-12-16 14:23:02,541 - ERROR - Failed to augment ISIC_0000017.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,543 - INFO - Generated: data/generated/original/benign\ISIC_0000017_aug_2.jpg (color)
+2025-12-16 14:23:02,552 - ERROR - Failed to augment ISIC_0000018.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,555 - INFO - Generated: data/generated/original/benign\ISIC_0000018_aug_2.jpg (color)
+2025-12-16 14:23:02,564 - ERROR - Failed to augment ISIC_0000019.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,567 - INFO - Generated: data/generated/original/benign\ISIC_0000019_aug_2.jpg (color)
+2025-12-16 14:23:02,574 - ERROR - Failed to augment ISIC_0000020.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,578 - INFO - Generated: data/generated/original/benign\ISIC_0000020_aug_2.jpg (color)
+2025-12-16 14:23:02,587 - ERROR - Failed to augment ISIC_0000021.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,589 - INFO - Generated: data/generated/original/benign\ISIC_0000021_aug_2.jpg (color)
+2025-12-16 14:23:02,595 - ERROR - Failed to augment ISIC_0000023.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,599 - INFO - Generated: data/generated/original/benign\ISIC_0000023_aug_2.jpg (color)
+2025-12-16 14:23:02,606 - ERROR - Failed to augment ISIC_0000024.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,608 - INFO - Generated: data/generated/original/benign\ISIC_0000024_aug_2.jpg (color)
+2025-12-16 14:23:02,617 - ERROR - Failed to augment ISIC_0000025.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,619 - INFO - Generated: data/generated/original/benign\ISIC_0000025_aug_2.jpg (color)
+2025-12-16 14:23:02,626 - ERROR - Failed to augment ISIC_0000027.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,632 - INFO - Generated: data/generated/original/benign\ISIC_0000027_aug_2.jpg (color)
+2025-12-16 14:23:02,639 - ERROR - Failed to augment ISIC_0000028.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,641 - INFO - Generated: data/generated/original/benign\ISIC_0000028_aug_2.jpg (color)
+2025-12-16 14:23:02,651 - ERROR - Failed to augment ISIC_0000032.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,655 - INFO - Generated: data/generated/original/benign\ISIC_0000032_aug_2.jpg (color)
+2025-12-16 14:23:02,661 - ERROR - Failed to augment ISIC_0000033.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,666 - INFO - Generated: data/generated/original/benign\ISIC_0000033_aug_2.jpg (color)
+2025-12-16 14:23:02,673 - ERROR - Failed to augment ISIC_0000034.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,675 - INFO - Generated: data/generated/original/benign\ISIC_0000034_aug_2.jpg (color)
+2025-12-16 14:23:02,684 - ERROR - Failed to augment ISIC_0000037.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,687 - INFO - Generated: data/generated/original/benign\ISIC_0000037_aug_2.jpg (color)
+2025-12-16 14:23:02,694 - ERROR - Failed to augment ISIC_0000038.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,699 - INFO - Generated: data/generated/original/benign\ISIC_0000038_aug_2.jpg (color)
+2025-12-16 14:23:02,707 - ERROR - Failed to augment ISIC_0000039.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,710 - INFO - Generated: data/generated/original/benign\ISIC_0000039_aug_2.jpg (color)
+2025-12-16 14:23:02,773 - ERROR - Failed to augment ISIC_0000041.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,775 - INFO - Generated: data/generated/original/benign\ISIC_0000041_aug_2.jpg (color)
+2025-12-16 14:23:02,789 - ERROR - Failed to augment ISIC_0000042.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,801 - INFO - Generated: data/generated/original/benign\ISIC_0000042_aug_2.jpg (color)
+2025-12-16 14:23:02,808 - ERROR - Failed to augment ISIC_0000002.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,813 - INFO - Generated: data/generated/original/malignant\ISIC_0000002_aug_2.jpg (color)
+2025-12-16 14:23:02,821 - ERROR - Failed to augment ISIC_0000004.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,834 - INFO - Generated: data/generated/original/malignant\ISIC_0000004_aug_2.jpg (color)
+2025-12-16 14:23:02,839 - ERROR - Failed to augment ISIC_0000013.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,840 - INFO - Generated: data/generated/original/malignant\ISIC_0000013_aug_2.jpg (color)
+2025-12-16 14:23:02,851 - ERROR - Failed to augment ISIC_0000022.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,869 - INFO - Generated: data/generated/original/malignant\ISIC_0000022_aug_2.jpg (color)
+2025-12-16 14:23:02,876 - ERROR - Failed to augment ISIC_0000026.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,892 - INFO - Generated: data/generated/original/malignant\ISIC_0000026_aug_2.jpg (color)
+2025-12-16 14:23:02,900 - ERROR - Failed to augment ISIC_0000029.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,904 - INFO - Generated: data/generated/original/malignant\ISIC_0000029_aug_2.jpg (color)
+2025-12-16 14:23:02,911 - ERROR - Failed to augment ISIC_0000030.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,918 - INFO - Generated: data/generated/original/malignant\ISIC_0000030_aug_2.jpg (color)
+2025-12-16 14:23:02,925 - ERROR - Failed to augment ISIC_0000031.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,927 - INFO - Generated: data/generated/original/malignant\ISIC_0000031_aug_2.jpg (color)
+2025-12-16 14:23:02,936 - ERROR - Failed to augment ISIC_0000035.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,937 - INFO - Generated: data/generated/original/malignant\ISIC_0000035_aug_2.jpg (color)
+2025-12-16 14:23:02,944 - ERROR - Failed to augment ISIC_0000036.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,948 - INFO - Generated: data/generated/original/malignant\ISIC_0000036_aug_2.jpg (color)
+2025-12-16 14:23:02,955 - ERROR - Failed to augment ISIC_0000040.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,957 - INFO - Generated: data/generated/original/malignant\ISIC_0000040_aug_2.jpg (color)
+2025-12-16 14:23:02,968 - ERROR - Failed to augment ISIC_0000043.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,970 - INFO - Generated: data/generated/original/malignant\ISIC_0000043_aug_2.jpg (color)
+2025-12-16 14:23:02,976 - ERROR - Failed to augment ISIC_0000046.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,983 - INFO - Generated: data/generated/original/malignant\ISIC_0000046_aug_2.jpg (color)
+2025-12-16 14:23:02,990 - ERROR - Failed to augment ISIC_0000049.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:02,992 - INFO - Generated: data/generated/original/malignant\ISIC_0000049_aug_2.jpg (color)
+2025-12-16 14:23:03,002 - ERROR - Failed to augment ISIC_0000054.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,016 - INFO - Generated: data/generated/original/malignant\ISIC_0000054_aug_2.jpg (color)
+2025-12-16 14:23:03,023 - ERROR - Failed to augment ISIC_0000056.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,025 - INFO - Generated: data/generated/original/malignant\ISIC_0000056_aug_2.jpg (color)
+2025-12-16 14:23:03,033 - ERROR - Failed to augment ISIC_0000070.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,038 - INFO - Generated: data/generated/original/malignant\ISIC_0000070_aug_2.jpg (color)
+2025-12-16 14:23:03,042 - ERROR - Failed to augment ISIC_0000074.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,045 - INFO - Generated: data/generated/original/malignant\ISIC_0000074_aug_2.jpg (color)
+2025-12-16 14:23:03,054 - ERROR - Failed to augment ISIC_0000076.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,057 - INFO - Generated: data/generated/original/malignant\ISIC_0000076_aug_2.jpg (color)
+2025-12-16 14:23:03,062 - ERROR - Failed to augment ISIC_0000077.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,067 - INFO - Generated: data/generated/original/malignant\ISIC_0000077_aug_2.jpg (color)
+2025-12-16 14:23:03,074 - ERROR - Failed to augment ISIC_0000078.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,091 - INFO - Generated: data/generated/original/malignant\ISIC_0000078_aug_2.jpg (color)
+2025-12-16 14:23:03,111 - ERROR - Failed to augment ISIC_0000139.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,120 - INFO - Generated: data/generated/original/malignant\ISIC_0000139_aug_2.jpg (color)
+2025-12-16 14:23:03,142 - ERROR - Failed to augment ISIC_0000140.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,154 - INFO - Generated: data/generated/original/malignant\ISIC_0000140_aug_2.jpg (color)
+2025-12-16 14:23:03,170 - ERROR - Failed to augment ISIC_0000141.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,172 - INFO - Generated: data/generated/original/malignant\ISIC_0000141_aug_2.jpg (color)
+2025-12-16 14:23:03,187 - ERROR - Failed to augment ISIC_0000142.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,189 - INFO - Generated: data/generated/original/malignant\ISIC_0000142_aug_2.jpg (color)
+2025-12-16 14:23:03,209 - ERROR - Failed to augment ISIC_0000143.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,212 - INFO - Generated: data/generated/original/malignant\ISIC_0000143_aug_2.jpg (color)
+2025-12-16 14:23:03,230 - ERROR - Failed to augment ISIC_0000144.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,235 - INFO - Generated: data/generated/original/malignant\ISIC_0000144_aug_2.jpg (color)
+2025-12-16 14:23:03,251 - ERROR - Failed to augment ISIC_0000145.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,253 - INFO - Generated: data/generated/original/malignant\ISIC_0000145_aug_2.jpg (color)
+2025-12-16 14:23:03,270 - ERROR - Failed to augment ISIC_0000146.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,272 - INFO - Generated: data/generated/original/malignant\ISIC_0000146_aug_2.jpg (color)
+2025-12-16 14:23:03,287 - ERROR - Failed to augment ISIC_0000147.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,289 - INFO - Generated: data/generated/original/malignant\ISIC_0000147_aug_2.jpg (color)
+2025-12-16 14:23:03,310 - ERROR - Failed to augment ISIC_0000148.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,322 - INFO - Generated: data/generated/original/malignant\ISIC_0000148_aug_2.jpg (color)
+2025-12-16 14:23:03,336 - ERROR - Failed to augment ISIC_0000149.jpg: module 'albumentations' has no attribute 'GaussBlur'
+2025-12-16 14:23:03,341 - INFO - Generated: data/generated/original/malignant\ISIC_0000149_aug_2.jpg (color)
+2025-12-16 14:23:03,344 - INFO - Metadata saved to data/generated/original/metadata.csv
+2025-12-16 14:23:03,349 - INFO - Augmentation log saved to data/generated/original/augmentation_log.json
+2025-12-16 14:23:03,352 - INFO - 
+======================================================================
+2025-12-16 14:23:03,352 - INFO - DATASET STATISTICS
+2025-12-16 14:23:03,352 - INFO - ======================================================================
+2025-12-16 14:23:03,352 - INFO - Total images: 94
+2025-12-16 14:23:03,352 - INFO - Original images: 30 (31.9%)
+2025-12-16 14:23:03,352 - INFO - Generated images: 64 (68.1%)
+2025-12-16 14:23:03,352 - INFO - Class distribution: {'benign': 32, 'malignant': 32}
+2025-12-16 14:23:03,352 - INFO - Augmentation types: {'color': 64}
+2025-12-16 14:23:03,355 - INFO - 
+Statistics saved to data/generated/original/generation_statistics.csv
+2025-12-16 14:23:03,356 - INFO - Output directory: data/generated/original/
+2025-12-16 14:23:34,249 - INFO - ======================================================================
+2025-12-16 14:23:34,249 - INFO - MODUL 1: DATA ACQUISITION - SYNTHETIC DATA GENERATION
+2025-12-16 14:23:34,249 - INFO - ======================================================================
+2025-12-16 14:23:34,250 - INFO - Loaded 30 images from data/raw/
+2025-12-16 14:23:34,250 - INFO - Processing 30 original images...
+2025-12-16 14:23:34,252 - INFO - Loaded 64 images from data/raw/
+2025-12-16 14:23:34,290 - INFO - Generated: data/generated/original/benign\ISIC_0000000_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,292 - INFO - Generated: data/generated/original/benign\ISIC_0000000_aug_2.jpg (color)
+2025-12-16 14:23:34,306 - INFO - Generated: data/generated/original/benign\ISIC_0000001_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,316 - INFO - Generated: data/generated/original/benign\ISIC_0000001_aug_2.jpg (color)
+2025-12-16 14:23:34,327 - INFO - Generated: data/generated/original/benign\ISIC_0000003_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,332 - INFO - Generated: data/generated/original/benign\ISIC_0000003_aug_2.jpg (color)
+2025-12-16 14:23:34,341 - INFO - Generated: data/generated/original/benign\ISIC_0000005_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,344 - INFO - Generated: data/generated/original/benign\ISIC_0000005_aug_2.jpg (color)
+2025-12-16 14:23:34,355 - INFO - Generated: data/generated/original/benign\ISIC_0000006_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,357 - INFO - Generated: data/generated/original/benign\ISIC_0000006_aug_2.jpg (color)
+2025-12-16 14:23:34,378 - INFO - Generated: data/generated/original/benign\ISIC_0000007_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,383 - INFO - Generated: data/generated/original/benign\ISIC_0000007_aug_2.jpg (color)
+2025-12-16 14:23:34,402 - INFO - Generated: data/generated/original/benign\ISIC_0000008_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,405 - INFO - Generated: data/generated/original/benign\ISIC_0000008_aug_2.jpg (color)
+2025-12-16 14:23:34,424 - INFO - Generated: data/generated/original/benign\ISIC_0000009_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,425 - INFO - Generated: data/generated/original/benign\ISIC_0000009_aug_2.jpg (color)
+2025-12-16 14:23:34,440 - INFO - Generated: data/generated/original/benign\ISIC_0000010_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,442 - INFO - Generated: data/generated/original/benign\ISIC_0000010_aug_2.jpg (color)
+2025-12-16 14:23:34,459 - INFO - Generated: data/generated/original/benign\ISIC_0000011_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,462 - INFO - Generated: data/generated/original/benign\ISIC_0000011_aug_2.jpg (color)
+2025-12-16 14:23:34,474 - INFO - Generated: data/generated/original/benign\ISIC_0000012_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,475 - INFO - Generated: data/generated/original/benign\ISIC_0000012_aug_2.jpg (color)
+2025-12-16 14:23:34,494 - INFO - Generated: data/generated/original/benign\ISIC_0000014_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,499 - INFO - Generated: data/generated/original/benign\ISIC_0000014_aug_2.jpg (color)
+2025-12-16 14:23:34,509 - INFO - Generated: data/generated/original/benign\ISIC_0000015_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,511 - INFO - Generated: data/generated/original/benign\ISIC_0000015_aug_2.jpg (color)
+2025-12-16 14:23:34,534 - INFO - Generated: data/generated/original/benign\ISIC_0000016_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,536 - INFO - Generated: data/generated/original/benign\ISIC_0000016_aug_2.jpg (color)
+2025-12-16 14:23:34,557 - INFO - Generated: data/generated/original/benign\ISIC_0000017_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,559 - INFO - Generated: data/generated/original/benign\ISIC_0000017_aug_2.jpg (color)
+2025-12-16 14:23:34,601 - INFO - Generated: data/generated/original/benign\ISIC_0000018_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,605 - INFO - Generated: data/generated/original/benign\ISIC_0000018_aug_2.jpg (color)
+2025-12-16 14:23:34,645 - INFO - Generated: data/generated/original/benign\ISIC_0000019_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,651 - INFO - Generated: data/generated/original/benign\ISIC_0000019_aug_2.jpg (color)
+2025-12-16 14:23:34,665 - INFO - Generated: data/generated/original/benign\ISIC_0000020_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,667 - INFO - Generated: data/generated/original/benign\ISIC_0000020_aug_2.jpg (color)
+2025-12-16 14:23:34,685 - INFO - Generated: data/generated/original/benign\ISIC_0000021_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,686 - INFO - Generated: data/generated/original/benign\ISIC_0000021_aug_2.jpg (color)
+2025-12-16 14:23:34,716 - INFO - Generated: data/generated/original/benign\ISIC_0000023_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,719 - INFO - Generated: data/generated/original/benign\ISIC_0000023_aug_2.jpg (color)
+2025-12-16 14:23:34,753 - INFO - Generated: data/generated/original/benign\ISIC_0000024_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,767 - INFO - Generated: data/generated/original/benign\ISIC_0000024_aug_2.jpg (color)
+2025-12-16 14:23:34,805 - INFO - Generated: data/generated/original/benign\ISIC_0000025_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,807 - INFO - Generated: data/generated/original/benign\ISIC_0000025_aug_2.jpg (color)
+2025-12-16 14:23:34,826 - INFO - Generated: data/generated/original/benign\ISIC_0000027_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,832 - INFO - Generated: data/generated/original/benign\ISIC_0000027_aug_2.jpg (color)
+2025-12-16 14:23:34,851 - INFO - Generated: data/generated/original/benign\ISIC_0000028_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,853 - INFO - Generated: data/generated/original/benign\ISIC_0000028_aug_2.jpg (color)
+2025-12-16 14:23:34,892 - INFO - Generated: data/generated/original/benign\ISIC_0000032_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,908 - INFO - Generated: data/generated/original/benign\ISIC_0000032_aug_2.jpg (color)
+2025-12-16 14:23:34,932 - INFO - Generated: data/generated/original/benign\ISIC_0000033_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,934 - INFO - Generated: data/generated/original/benign\ISIC_0000033_aug_2.jpg (color)
+2025-12-16 14:23:34,956 - INFO - Generated: data/generated/original/benign\ISIC_0000034_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,971 - INFO - Generated: data/generated/original/benign\ISIC_0000034_aug_2.jpg (color)
+2025-12-16 14:23:34,987 - INFO - Generated: data/generated/original/benign\ISIC_0000037_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:34,989 - INFO - Generated: data/generated/original/benign\ISIC_0000037_aug_2.jpg (color)
+2025-12-16 14:23:35,023 - INFO - Generated: data/generated/original/benign\ISIC_0000038_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,025 - INFO - Generated: data/generated/original/benign\ISIC_0000038_aug_2.jpg (color)
+2025-12-16 14:23:35,066 - INFO - Generated: data/generated/original/benign\ISIC_0000039_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,069 - INFO - Generated: data/generated/original/benign\ISIC_0000039_aug_2.jpg (color)
+2025-12-16 14:23:35,109 - INFO - Generated: data/generated/original/benign\ISIC_0000041_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,111 - INFO - Generated: data/generated/original/benign\ISIC_0000041_aug_2.jpg (color)
+2025-12-16 14:23:35,150 - INFO - Generated: data/generated/original/benign\ISIC_0000042_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,152 - INFO - Generated: data/generated/original/benign\ISIC_0000042_aug_2.jpg (color)
+2025-12-16 14:23:35,175 - INFO - Generated: data/generated/original/malignant\ISIC_0000002_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,178 - INFO - Generated: data/generated/original/malignant\ISIC_0000002_aug_2.jpg (color)
+2025-12-16 14:23:35,189 - INFO - Generated: data/generated/original/malignant\ISIC_0000004_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,191 - INFO - Generated: data/generated/original/malignant\ISIC_0000004_aug_2.jpg (color)
+2025-12-16 14:23:35,200 - INFO - Generated: data/generated/original/malignant\ISIC_0000013_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,202 - INFO - Generated: data/generated/original/malignant\ISIC_0000013_aug_2.jpg (color)
+2025-12-16 14:23:35,239 - INFO - Generated: data/generated/original/malignant\ISIC_0000022_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,241 - INFO - Generated: data/generated/original/malignant\ISIC_0000022_aug_2.jpg (color)
+2025-12-16 14:23:35,264 - INFO - Generated: data/generated/original/malignant\ISIC_0000026_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,267 - INFO - Generated: data/generated/original/malignant\ISIC_0000026_aug_2.jpg (color)
+2025-12-16 14:23:35,303 - INFO - Generated: data/generated/original/malignant\ISIC_0000029_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,305 - INFO - Generated: data/generated/original/malignant\ISIC_0000029_aug_2.jpg (color)
+2025-12-16 14:23:35,323 - INFO - Generated: data/generated/original/malignant\ISIC_0000030_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,325 - INFO - Generated: data/generated/original/malignant\ISIC_0000030_aug_2.jpg (color)
+2025-12-16 14:23:35,361 - INFO - Generated: data/generated/original/malignant\ISIC_0000031_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,366 - INFO - Generated: data/generated/original/malignant\ISIC_0000031_aug_2.jpg (color)
+2025-12-16 14:23:35,402 - INFO - Generated: data/generated/original/malignant\ISIC_0000035_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,404 - INFO - Generated: data/generated/original/malignant\ISIC_0000035_aug_2.jpg (color)
+2025-12-16 14:23:35,449 - INFO - Generated: data/generated/original/malignant\ISIC_0000036_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,452 - INFO - Generated: data/generated/original/malignant\ISIC_0000036_aug_2.jpg (color)
+2025-12-16 14:23:35,467 - INFO - Generated: data/generated/original/malignant\ISIC_0000040_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,481 - INFO - Generated: data/generated/original/malignant\ISIC_0000040_aug_2.jpg (color)
+2025-12-16 14:23:35,498 - INFO - Generated: data/generated/original/malignant\ISIC_0000043_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,501 - INFO - Generated: data/generated/original/malignant\ISIC_0000043_aug_2.jpg (color)
+2025-12-16 14:23:35,550 - INFO - Generated: data/generated/original/malignant\ISIC_0000046_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,554 - INFO - Generated: data/generated/original/malignant\ISIC_0000046_aug_2.jpg (color)
+2025-12-16 14:23:35,566 - INFO - Generated: data/generated/original/malignant\ISIC_0000049_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,568 - INFO - Generated: data/generated/original/malignant\ISIC_0000049_aug_2.jpg (color)
+2025-12-16 14:23:35,602 - INFO - Generated: data/generated/original/malignant\ISIC_0000054_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,606 - INFO - Generated: data/generated/original/malignant\ISIC_0000054_aug_2.jpg (color)
+2025-12-16 14:23:35,638 - INFO - Generated: data/generated/original/malignant\ISIC_0000056_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,640 - INFO - Generated: data/generated/original/malignant\ISIC_0000056_aug_2.jpg (color)
+2025-12-16 14:23:35,659 - INFO - Generated: data/generated/original/malignant\ISIC_0000070_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,661 - INFO - Generated: data/generated/original/malignant\ISIC_0000070_aug_2.jpg (color)
+2025-12-16 14:23:35,677 - INFO - Generated: data/generated/original/malignant\ISIC_0000074_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,681 - INFO - Generated: data/generated/original/malignant\ISIC_0000074_aug_2.jpg (color)
+2025-12-16 14:23:35,704 - INFO - Generated: data/generated/original/malignant\ISIC_0000076_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,706 - INFO - Generated: data/generated/original/malignant\ISIC_0000076_aug_2.jpg (color)
+2025-12-16 14:23:35,735 - INFO - Generated: data/generated/original/malignant\ISIC_0000077_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,738 - INFO - Generated: data/generated/original/malignant\ISIC_0000077_aug_2.jpg (color)
+2025-12-16 14:23:35,773 - INFO - Generated: data/generated/original/malignant\ISIC_0000078_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,775 - INFO - Generated: data/generated/original/malignant\ISIC_0000078_aug_2.jpg (color)
+2025-12-16 14:23:35,853 - INFO - Generated: data/generated/original/malignant\ISIC_0000139_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:35,906 - INFO - Generated: data/generated/original/malignant\ISIC_0000139_aug_2.jpg (color)
+2025-12-16 14:23:36,034 - INFO - Generated: data/generated/original/malignant\ISIC_0000140_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,037 - INFO - Generated: data/generated/original/malignant\ISIC_0000140_aug_2.jpg (color)
+2025-12-16 14:23:36,103 - INFO - Generated: data/generated/original/malignant\ISIC_0000141_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,106 - INFO - Generated: data/generated/original/malignant\ISIC_0000141_aug_2.jpg (color)
+2025-12-16 14:23:36,166 - INFO - Generated: data/generated/original/malignant\ISIC_0000142_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,169 - INFO - Generated: data/generated/original/malignant\ISIC_0000142_aug_2.jpg (color)
+2025-12-16 14:23:36,211 - INFO - Generated: data/generated/original/malignant\ISIC_0000143_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,216 - INFO - Generated: data/generated/original/malignant\ISIC_0000143_aug_2.jpg (color)
+2025-12-16 14:23:36,255 - INFO - Generated: data/generated/original/malignant\ISIC_0000144_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,257 - INFO - Generated: data/generated/original/malignant\ISIC_0000144_aug_2.jpg (color)
+2025-12-16 14:23:36,296 - INFO - Generated: data/generated/original/malignant\ISIC_0000145_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,300 - INFO - Generated: data/generated/original/malignant\ISIC_0000145_aug_2.jpg (color)
+2025-12-16 14:23:36,330 - INFO - Generated: data/generated/original/malignant\ISIC_0000146_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,333 - INFO - Generated: data/generated/original/malignant\ISIC_0000146_aug_2.jpg (color)
+2025-12-16 14:23:36,377 - INFO - Generated: data/generated/original/malignant\ISIC_0000147_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,383 - INFO - Generated: data/generated/original/malignant\ISIC_0000147_aug_2.jpg (color)
+2025-12-16 14:23:36,443 - INFO - Generated: data/generated/original/malignant\ISIC_0000148_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,449 - INFO - Generated: data/generated/original/malignant\ISIC_0000148_aug_2.jpg (color)
+2025-12-16 14:23:36,514 - INFO - Generated: data/generated/original/malignant\ISIC_0000149_aug_1.jpg (rotation_zoom)
+2025-12-16 14:23:36,519 - INFO - Generated: data/generated/original/malignant\ISIC_0000149_aug_2.jpg (color)
+2025-12-16 14:23:36,522 - INFO - Metadata saved to data/generated/original/metadata.csv
+2025-12-16 14:23:36,526 - INFO - Augmentation log saved to data/generated/original/augmentation_log.json
+2025-12-16 14:23:36,531 - INFO - 
+======================================================================
+2025-12-16 14:23:36,531 - INFO - DATASET STATISTICS
+2025-12-16 14:23:36,531 - INFO - ======================================================================
+2025-12-16 14:23:36,531 - INFO - Total images: 158
+2025-12-16 14:23:36,531 - INFO - Original images: 30 (19.0%)
+2025-12-16 14:23:36,531 - INFO - Generated images: 128 (81.0%)
+2025-12-16 14:23:36,531 - INFO - Class distribution: {'benign': 64, 'malignant': 64}
+2025-12-16 14:23:36,531 - INFO - Augmentation types: {'rotation_zoom': 64, 'color': 64}
+2025-12-16 14:23:36,535 - INFO - 
+Statistics saved to data/generated/original/generation_statistics.csv
+2025-12-16 14:23:36,536 - INFO - Output directory: data/generated/original/

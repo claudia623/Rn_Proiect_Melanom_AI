@@ -9,7 +9,7 @@ import sys
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from sklearn.metrics import (
     classification_report,
     confusion_matrix,
@@ -59,7 +59,7 @@ def create_test_generator(test_dir: str,
     Returns:
         Generatorul de date de test
     """
-    test_datagen = ImageDataGenerator(rescale=1./255)
+    test_datagen = ImageDataGenerator() # rescale=1./255
     
     test_generator = test_datagen.flow_from_directory(
         test_dir,

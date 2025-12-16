@@ -63,7 +63,7 @@ def get_augmentation_pipeline():
     return A.Compose([
         A.Rotate(limit=5, p=0.7),  # ±5 degrees, clinically realistic
         A.Affine(scale=(1.05, 1.15), p=0.6),  # Zoom 5-15%
-        A.GaussBlur(blur_limit=(3, 5), p=0.4),  # Slight blur simulation
+        A.GaussianBlur(blur_limit=(3, 5), p=0.4),  # Slight blur simulation
         A.RandomBrightnessContrast(
             brightness_limit=0.15,  # ±15% brightness
             contrast_limit=0.15,    # ±15% contrast
@@ -85,7 +85,7 @@ def get_color_augmentation():
     """
     return A.Compose([
         A.RandomRain(p=0.1),  # Artifact simulation
-        A.Downscale(scale_min=0.95, scale_max=0.99, p=0.3),  # Low-resolution simulation
+        # A.Downscale(scale_min=0.95, scale_max=0.99, p=0.3),  # Low-resolution simulation
         A.Resize(height=CONFIG['image_size'][0],
                 width=CONFIG['image_size'][1],
                 p=1.0),

@@ -9,8 +9,8 @@ import sys
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
-from keras.preprocessing.image import ImageDataGenerator
-from keras.callbacks import (
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from tensorflow.keras.callbacks import (
     ModelCheckpoint,
     EarlyStopping,
     ReduceLROnPlateau,
@@ -60,7 +60,7 @@ def create_data_generators(train_dir: str,
     # Generator pentru antrenare (cu augmentare)
     if augmentation:
         train_datagen = ImageDataGenerator(
-            rescale=1./255,
+            # rescale=1./255,  # EfficientNet include scalare
             rotation_range=20,
             width_shift_range=0.2,
             height_shift_range=0.2,
@@ -72,10 +72,10 @@ def create_data_generators(train_dir: str,
             fill_mode='reflect'
         )
     else:
-        train_datagen = ImageDataGenerator(rescale=1./255)
+        train_datagen = ImageDataGenerator() # rescale=1./255
     
     # Generator pentru validare (fără augmentare)
-    val_datagen = ImageDataGenerator(rescale=1./255)
+    val_datagen = ImageDataGenerator() # rescale=1./255
     
     # Creare generatoare
     train_generator = train_datagen.flow_from_directory(

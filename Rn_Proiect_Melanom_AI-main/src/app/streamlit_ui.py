@@ -25,20 +25,16 @@ import os
 from typing import Tuple, Optional, Dict
 
 # Import Module 2 (Neural Network)
-from src.neural_network.similarity_model import (
-    create_similarity_model,
-    load_model,
-    extract_features,
-    compute_similarity,
-    classify_melanoma
-)
+from tensorflow.keras.models import load_model
+from tensorflow.keras.preprocessing.image import img_to_array
+from tensorflow.keras.applications.efficientnet import preprocess_input
 
 # ============================================================================
 # CONFIGURATION
 # ============================================================================
 
 CONFIG = {
-    'model_path': 'models/similarity_model_untrained.h5',
+    'model_path': 'models/melanom_efficientnetb0_best.keras',
     'reference_dir': 'data/generated/original/',
     'output_dir': 'logs/',
     'log_file': 'logs/predictions.csv',
@@ -101,15 +97,10 @@ def load_nn_model():
         if os.path.exists(CONFIG['model_path']):
             model = load_model(CONFIG['model_path'])
             logger.info(f"Model loaded from {CONFIG['model_path']}")
+            return model
         else:
-            logger.info("Creating new similarity model...")
-            model = create_similarity_model()
-            # Save for future use
-            os.makedirs(Path(CONFIG['model_path']).parent, exist_ok=True)
-            model.save(CONFIG['model_path'])
-            logger.info(f"Model saved to {CONFIG['model_path']}")
-        
-        return model
+            st.error(f"❌ Model not found at {CONFIG['model_path']}. Please run training first.")
+            st.stop()
     except Exception as e:
         logger.error(f"Error loading model: {str(e)}")
         st.error(f"❌ Error loading neural network model: {str(e)}")
@@ -163,8 +154,8 @@ def preprocess_image(image: np.ndarray) -> np.ndarray:
     Preprocesează imagine pentru neural network.
     
     1. Resize la 224x224
-    2. Normalize la [0, 1]
-    3. Ensure RGB format
+    2. Convert to RGB
+    3. Expand dims (1, 224, 224, 3)
     """
     
     # Resize
@@ -173,86 +164,18 @@ def preprocess_image(image: np.ndarray) -> np.ndarray:
     # Convert BGR → RGB
     image_rgb = cv2.cvtColor(image_resized, cv2.COLOR_BGR2RGB)
     
-    # Normalize to [0, 1]
-    image_normalized = image_rgb.astype(np.float32) / 255.0
+    # Expand dims
+    image_batch = np.expand_dims(image_rgb, axis=0)
     
-    return image_normalized
+    # Note: EfficientNet model includes preprocessing layer, so we pass raw pixels [0, 255]
+    
+    return image_batch
 
 
-@st.cache_data
-def load_reference_images() -> Dict[str, list]:
-    """
-    Încarcă imagini referință din baza de date.
-    
-    Returns:
-        {
-            'benign': [(image_path, image_array), ...],
-            'malignant': [(image_path, image_array), ...]
-        }
-    """
-    
-    reference_images = {'benign': [], 'malignant': []}
-    
-    for class_label in ['benign', 'malignant']:
-        class_dir = os.path.join(CONFIG['reference_dir'], class_label)
-        
-        if not os.path.exists(class_dir):
-            logger.warning(f"Reference directory not found: {class_dir}")
-            continue
-        
-        image_files = sorted([f for f in os.listdir(class_dir)
-                            if f.lower().endswith(('.jpg', '.jpeg', '.png'))])[:10]  # Max 10 per class
-        
-        for image_file in image_files:
-            image_path = os.path.join(class_dir, image_file)
-            try:
-                image = cv2.imread(image_path)
-                if image is not None:
-                    image_resized = cv2.resize(image, CONFIG['image_size'])
-                    image_rgb = cv2.cvtColor(image_resized, cv2.COLOR_BGR2RGB)
-                    image_normalized = image_rgb.astype(np.float32) / 255.0
-                    reference_images[class_label].append((image_file, image_normalized))
-            except Exception as e:
-                logger.warning(f"Error loading reference image {image_path}: {str(e)}")
-    
-    logger.info(f"Loaded {len(reference_images['benign'])} benign reference images")
-    logger.info(f"Loaded {len(reference_images['malignant'])} malignant reference images")
-    
-    return reference_images
 
 
-def compute_similarities(model, image: np.ndarray, reference_images: Dict) -> Tuple[list, list]:
-    """
-    Calculează similarități cu toate imaginile referință.
-    """
-    
-    try:
-        # Extract features din imagine test
-        features_test = extract_features(model, image)
-        
-        similarities_benign = []
-        similarities_malignant = []
-        
-        # Compare with benign references
-        for ref_name, ref_image in reference_images['benign']:
-            features_ref = extract_features(model, ref_image)
-            sim = compute_similarity(features_test, features_ref)
-            similarities_benign.append(sim)
-        
-        # Compare with malignant references
-        for ref_name, ref_image in reference_images['malignant']:
-            features_ref = extract_features(model, ref_image)
-            sim = compute_similarity(features_test, features_ref)
-            similarities_malignant.append(sim)
-        
-        return similarities_benign, similarities_malignant
-    
-    except Exception as e:
-        logger.error(f"Error computing similarities: {str(e)}")
-        return [], []
 
-
-def log_prediction(filename: str, classification: str, scores: Dict) -> None:
+def log_prediction(filename: str, classification: str, probability: float) -> None:
     """
     Salvează predicție în CSV pentru audit clinic.
     """
@@ -264,11 +187,7 @@ def log_prediction(filename: str, classification: str, scores: Dict) -> None:
             'timestamp': datetime.now().isoformat(),
             'filename': filename,
             'classification': classification,
-            'benign_score': scores['benign_mean'],
-            'benign_std': scores['benign_std'],
-            'malignant_score': scores['malignant_mean'],
-            'malignant_std': scores['malignant_std'],
-            'confidence': scores['confidence'],
+            'probability_malignant': probability,
         }
         
         # Append to CSV
@@ -294,7 +213,7 @@ def main():
     """
     
     # Header
-    st.title("🏥 Melanom AI - Similarity-Based Classification System")
+    st.title("🏥 Melanom AI - Classification System")
     st.markdown("**Automatic skin lesion classification: Benign vs Malignant**")
     
     # Sidebar
@@ -304,43 +223,22 @@ def main():
         **How it works:**
         1. Upload dermatoscopic image
         2. System validates image quality
-        3. Extracts features using EfficientNetB0
-        4. Compares with 20+ reference images
-        5. Classifies as BENIGN or MALIGNANT
+        3. Preprocesses image (EfficientNet standard)
+        4. Classifies using trained Neural Network
         
-        **Classification Method:**
-        - Similarity-based matching
-        - Cosine distance metric
-        - Confidence threshold: 0.50+
-        
-        **Reference Dataset:**
-        - 15+ benign reference images
-        - 15+ malignant reference images
-        - ISIC archive source + synthetic augmentation
+        **Model Info:**
+        - **Architecture:** EfficientNetB0
+        - **Input:** 224x224 RGB
+        - **Output:** Probability (0-1)
+        - **Threshold:** 0.5
         """)
         
         st.divider()
-        st.markdown("**Model Info:**")
-        st.markdown(f"""
-        - **Architecture:** EfficientNetB0 + Dense(256)
-        - **Features:** 256D vectors (L2 normalized)
-        - **Transfer Learning:** ImageNet pretraining
-        - **Inference Time:** ~100ms per image
-        - **Model Status:** Etapa 4 (Untrained)
-        """)
+        st.markdown("**Status:** Etapa 5 (Trained Model)")
     
-    # Load model and references (cached)
+    # Load model (cached)
     with st.spinner("Loading neural network model..."):
         model = load_nn_model()
-    
-    with st.spinner("Loading reference images..."):
-        reference_images = load_reference_images()
-    
-    # Check if we have references
-    if not reference_images['benign'] or not reference_images['malignant']:
-        st.warning("⚠️ Not enough reference images loaded. Please ensure data/generated/original/ contains images.")
-        st.info("Run: python src/data_acquisition/generate_synthetic_data.py")
-        st.stop()
     
     # Main content - Two columns
     col1, col2 = st.columns([1, 1])
@@ -380,22 +278,19 @@ def main():
                 
                 if st.button("🎯 Analyze Image", use_container_width=True):
                     
-                    with st.spinner("Computing image features..."):
-                        # Extract features
+                    with st.spinner("Analyzing image..."):
                         try:
-                            similarities_benign, similarities_malignant = compute_similarities(
-                                model, image_preprocessed, reference_images
-                            )
-                            
-                            if not similarities_benign or not similarities_malignant:
-                                st.error("❌ Error computing similarities")
-                                st.stop()
+                            # Predict
+                            prediction = model.predict(image_preprocessed, verbose=0)
+                            probability = float(prediction[0][0])
                             
                             # Classify
-                            classification, confidence, scores = classify_melanoma(
-                                similarities_benign,
-                                similarities_malignant
-                            )
+                            if probability > 0.5:
+                                classification = "MALIGNANT"
+                                confidence = probability
+                            else:
+                                classification = "BENIGN"
+                                confidence = 1.0 - probability
                             
                         except Exception as e:
                             st.error(f"❌ Error during analysis: {str(e)}")
@@ -412,10 +307,8 @@ def main():
                     
                     if classification == "BENIGN":
                         st.markdown(f"<div class='diagnosis-benign'>✅ BENIGN</div>", unsafe_allow_html=True)
-                        color = "green"
                     else:
                         st.markdown(f"<div class='diagnosis-malignant'>⚠️ MALIGNANT</div>", unsafe_allow_html=True)
-                        color = "red"
                     
                     st.divider()
                     
@@ -423,10 +316,10 @@ def main():
                     st.markdown("### 📊 Confidence")
                     confidence_pct = confidence * 100
                     
-                    if confidence > 0.7:
+                    if confidence > 0.8:
                         confidence_class = "confidence-high"
                         confidence_text = "HIGH"
-                    elif confidence > 0.3:
+                    elif confidence > 0.6:
                         confidence_class = "confidence-medium"
                         confidence_text = "MEDIUM"
                     else:
@@ -436,73 +329,18 @@ def main():
                     st.markdown(f"<div class='{confidence_class}'>{confidence_pct:.1f}% ({confidence_text})</div>",
                               unsafe_allow_html=True)
                     
-                    # Similarity scores
-                    st.markdown("### 📈 Similarity Scores")
+                    st.progress(confidence)
                     
-                    col_ben, col_mal = st.columns(2)
-                    
-                    with col_ben:
-                        st.metric(
-                            "Benign Match",
-                            f"{scores['benign_mean']:.1%}",
-                            f"σ={scores['benign_std']:.1%}"
-                        )
-                    
-                    with col_mal:
-                        st.metric(
-                            "Malignant Match",
-                            f"{scores['malignant_mean']:.1%}",
-                            f"σ={scores['malignant_std']:.1%}"
-                        )
-                    
-                    # Detailed statistics
-                    with st.expander("📊 Detailed Statistics"):
-                        st.write("""
-                        - **Benign Mean:** Average similarity with benign references
-                        - **Benign Std:** Standard deviation (consistency)
-                        - **Benign Min/Max:** Range of similarity scores
-                        - Similar interpretation for Malignant scores
-                        """)
-                        
-                        stats_df = pd.DataFrame({
-                            'Class': ['Benign', 'Malignant'],
-                            'Mean Score': [scores['benign_mean'], scores['malignant_mean']],
-                            'Std Dev': [scores['benign_std'], scores['malignant_std']],
-                            'Min': [scores['benign_min'], scores['malignant_min']],
-                            'Max': [scores['benign_max'], scores['malignant_max']],
-                        })
-                        st.dataframe(stats_df, use_container_width=True)
-                    
-                    # Reference images grid
-                    st.markdown("### 🖼️ Top Similar Reference Images")
-                    
-                    # Get top 3 similar benign
-                    top_benign_idx = np.argsort(similarities_benign)[::-1][:3]
-                    top_malignant_idx = np.argsort(similarities_malignant)[::-1][:3]
-                    
-                    st.markdown("**Similar Benign References:**")
-                    cols = st.columns(3)
-                    for i, idx in enumerate(top_benign_idx):
-                        with cols[i]:
-                            ref_name, ref_image = reference_images['benign'][idx]
-                            st.image(ref_image, 
-                                   caption=f"{ref_name}\n{similarities_benign[idx]:.1%}",
-                                   use_column_width=True)
-                    
-                    st.markdown("**Similar Malignant References:**")
-                    cols = st.columns(3)
-                    for i, idx in enumerate(top_malignant_idx):
-                        with cols[i]:
-                            ref_name, ref_image = reference_images['malignant'][idx]
-                            st.image(ref_image,
-                                   caption=f"{ref_name}\n{similarities_malignant[idx]:.1%}",
-                                   use_column_width=True)
+                    # Probability details
+                    with st.expander("ℹ️ Technical Details"):
+                        st.write(f"Raw Probability (Malignant): {probability:.4f}")
+                        st.write(f"Threshold: 0.5")
                     
                     # Log prediction
                     log_prediction(
                         uploaded_file.name,
                         classification,
-                        scores
+                        probability
                     )
                     
                     st.success("✅ Prediction saved to logs!")
