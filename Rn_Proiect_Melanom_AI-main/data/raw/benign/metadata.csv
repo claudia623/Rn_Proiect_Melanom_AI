@@ -1,33 +1,51 @@
 isic_id,attribution,copyright_license,age_approx,anatom_site_general,concomitant_biopsy,diagnosis_1,diagnosis_2,diagnosis_3,diagnosis_4,diagnosis_5,image_type,melanocytic,sex
-ISIC_0000000,Anonymous,CC-0,55,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000001,Anonymous,CC-0,30,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000003,Anonymous,CC-0,30,upper extremity,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
-ISIC_0000005,Anonymous,CC-0,40,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000006,Anonymous,CC-0,25,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000007,Anonymous,CC-0,25,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000008,Anonymous,CC-0,30,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000009,Anonymous,CC-0,30,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000010,Anonymous,CC-0,35,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000011,Anonymous,CC-0,35,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000012,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,male
-ISIC_0000014,Anonymous,CC-0,35,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,male
-ISIC_0000015,Anonymous,CC-0,35,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
-ISIC_0000016,Anonymous,CC-0,55,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000017,Anonymous,CC-0,50,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000018,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
-ISIC_0000019,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000020,Anonymous,CC-0,25,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000021,Anonymous,CC-0,55,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000023,Anonymous,CC-0,30,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000024,Anonymous,CC-0,45,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
-ISIC_0000025,Anonymous,CC-0,35,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000027,Anonymous,CC-0,35,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000028,Anonymous,CC-0,60,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
-ISIC_0000032,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000033,Anonymous,CC-0,45,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
-ISIC_0000034,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000037,Anonymous,CC-0,70,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,male
-ISIC_0000038,Anonymous,CC-0,40,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000039,Anonymous,CC-0,60,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000041,Anonymous,CC-0,40,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
-ISIC_0000042,Anonymous,CC-0,50,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,male
+ISIC_0000065,Anonymous,CC-0,30,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
+ISIC_0000066,Anonymous,CC-0,55,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
+ISIC_0000067,Anonymous,CC-0,45,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
+ISIC_0000068,Anonymous,CC-0,35,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
+ISIC_0000069,Anonymous,CC-0,15,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
+ISIC_0000071,Anonymous,CC-0,25,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,male
+ISIC_0000072,Anonymous,CC-0,85,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,male
+ISIC_0000073,Anonymous,CC-0,20,posterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
+ISIC_0000075,Anonymous,CC-0,50,anterior torso,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,female
+ISIC_0000079,Anonymous,CC-0,55,lower extremity,False,Benign,Benign melanocytic proliferations,Nevus,"Nevus, Atypical, Dysplastic, or Clark","Nevus, Dysplastic",dermoscopic,True,female
+ISIC_0000080,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000081,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000082,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000083,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000084,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000085,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000086,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000087,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000088,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000089,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000090,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000091,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000092,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000093,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000094,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000095,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000096,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000097,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000098,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000099,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000100,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000101,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000102,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000103,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000104,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000105,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000106,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000107,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000108,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000109,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000110,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000111,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000112,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000113,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000114,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000115,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000116,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000117,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000118,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,
+ISIC_0000119,Anonymous,CC-0,,,False,Benign,Benign melanocytic proliferations,Nevus,,,dermoscopic,True,

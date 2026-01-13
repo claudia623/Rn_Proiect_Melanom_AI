@@ -332,8 +332,78 @@ assert np.allclose(np.linalg.norm(features), 1.0)
 
 ---
 
-**Status:** ✅ Implementat pentru Etapa 4 (Feature extraction only)  
-**Arhitectură:** EfficientNetB0 + Dense(256) + L2 Normalization  
-**Antrenare:** NU (weights pretrained ImageNet)  
-**Autor:** Dumitru Claudia-Stefania  
-**Data:** 09.12.2025
+## ETAPA 5 - ANTRENARE ȘI EVALUARE
+
+### Status Update (12.01.2026)
+
+**Status:** ✅ **ANTRENAT ȘI EVALUAT**  
+**Model salvat:** `models/melanom_efficientnetb0_best.keras`
+
+### Modificări Etapa 5
+
+#### 1. Arhitectură Head (ACTUALIZAT)
+```
+GlobalAveragePooling2D → 
+  Dense(512, ReLU) + BatchNormalization + Dropout(0.5) →
+  Dense(256, ReLU) + BatchNormalization + Dropout(0.5) →
+  Dense(1, Sigmoid)  [Binary Classification OUTPUT]
+```
+
+**Comparativ Etapa 4:** Etapa 4 avea Dense(256) + L2Norm pentru similarity. Etapa 5 înlocuiește cu stru mai profundă cu BatchNorm și dropout.
+
+#### 2. Rezultate Test Set
+| Metrica | Valoare |
+|---------|---------|
+| **Accuracy** | 70.59% |
+| **AUC (ROC)** | 0.8114 |
+| **Sensitivity** | 94.12% ✓ |
+| **Precision** | 64.00% |
+| **F1-score** | 0.826 |
+
+**Interpretare:** Model detectează 94% din melanome reale (excelent), dar are 50% false alarms pe benign (trebuie ajustare threshold).
+
+#### 3. Training: Două Faze
+
+**Phase 1 - Transfer Learning (11 epoci):**
+- Base EfficientNetB0: FROZEN, Head: ANTRENAT
+- Learning rate: 1e-3, Best val_auc: 0.928
+
+**Phase 2 - Fine-tuning (10 epoci):**
+- Ultimele 30 layere EfficientNetB0: DEZGHEȚATE, lr: 1e-5
+- Best val_auc: 0.960, Test AUC: 0.8114
+
+#### 4. Evaluare și Analiza Erori
+
+📄 **Raport detaliat:** `docs/error_analysis/ERROR_ANALYSIS_REPORT.md`
+
+Conține:
+- Confusion matrix (7 False Positives, 1 False Negative)
+- Analiza pe-error cu cauze și soluții
+- Recomandări prioritizate pentru îmbunătățire
+
+**URGENT:** Ajustare threshold 0.5 → 0.35-0.40 pentru a reduce False Negatives critici.
+
+#### 5. Utilizare Model Antrenat
+
+```python
+import tensorflow as tf
+from tensorflow.keras.applications.efficientnet import preprocess_input
+
+model = tf.keras.models.load_model('models/melanom_efficientnetb0_best.keras')
+
+# Preproceseaza și predicție
+prediction = model.predict(preprocessed_image)  # Output: 0-1 probability
+classification = "MALIGNANT" if prediction > 0.35 else "BENIGN"  # Ajustat threshold!
+```
+
+#### 6. Scripts
+- **Antrenare:** `src/neural_network/train.py`
+- **Evaluare:** `src/neural_network/evaluate.py`
+- **Visualizări:** `generate_plots_simple.py` → `docs/phase1_loss_accuracy.png`, `docs/phase2_loss_accuracy.png`, `docs/auc_curves_combined.png`
+
+---
+
+**Status Final:** ✅ COMPLETAT (Etapa 4 + 5)  
+**Model Status:** PRODUCȚIE-READY cu ajustări threshold urgente  
+**Data:** 12.01.2026  
+**Autor:** Dumitru Claudia-Stefania

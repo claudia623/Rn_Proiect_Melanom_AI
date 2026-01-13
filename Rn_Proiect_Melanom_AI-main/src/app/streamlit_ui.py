@@ -18,6 +18,8 @@ import streamlit as st
 import cv2
 import numpy as np
 import pandas as pd
+import matplotlib.pyplot as plt
+import json
 from pathlib import Path
 import logging
 from datetime import datetime
@@ -99,7 +101,15 @@ def load_nn_model():
             logger.info(f"Model loaded from {CONFIG['model_path']}")
             return model
         else:
-            st.error(f"❌ Model not found at {CONFIG['model_path']}. Please run training first.")
+            current_dir = os.getcwd()
+            st.error(f"❌ Model not found at {CONFIG['model_path']}")
+            st.info(f"Current working directory: {current_dir}")
+            st.info("Searching for models in local directory...")
+            
+            # Try to help the user find the file
+            if os.path.exists('Rn_Proiect_Melanom_AI-main/' + CONFIG['model_path']):
+                st.warning(f"💡 Found it in a subfolder! Please use the provided run_app.bat to launch.")
+            
             st.stop()
     except Exception as e:
         logger.error(f"Error loading model: {str(e)}")
@@ -203,6 +213,47 @@ def log_prediction(filename: str, classification: str, probability: float) -> No
         logger.error(f"Error logging prediction: {str(e)}")
 
 
+def plot_training_history(history1_path: str, history2_path: str):
+    """Afișează graficele de antrenare."""
+    
+    try:
+        with open(history1_path, 'r') as f:
+            h1 = json.load(f)
+        
+        has_h2 = False
+        if os.path.exists(history2_path):
+            with open(history2_path, 'r') as f:
+                h2 = json.load(f)
+            has_h2 = True
+            
+        # Merge metrics
+        metrics = ['accuracy', 'loss', 'auc']
+        fig, axes = plt.subplots(1, 3, figsize=(18, 5))
+        
+        for i, metric in enumerate(metrics):
+            if metric in h1:
+                val_metric = f'val_{metric}'
+                data = h1[metric]
+                val_data = h1[val_metric]
+                
+                if has_h2 and metric in h2:
+                    data = data + h2[metric]
+                    val_data = val_data + h2[val_metric]
+                
+                axes[i].plot(data, label='Train')
+                axes[i].plot(val_data, label='Val')
+                if has_h2:
+                    axes[i].axvline(x=len(h1[metric])-1, color='r', linestyle='--', label='Fine-tuning')
+                axes[i].set_title(metric.capitalize())
+                axes[i].set_xlabel('Epoch')
+                axes[i].legend()
+        
+        st.pyplot(fig)
+        
+    except Exception as e:
+        st.warning(f"Could not load history for plotting: {str(e)}")
+
+
 # ============================================================================
 # MAIN UI
 # ============================================================================
@@ -216,6 +267,35 @@ def main():
     st.title("🏥 Melanom AI - Classification System")
     st.markdown("**Automatic skin lesion classification: Benign vs Malignant**")
     
+    # Tabs
+    tab_diag, tab_metrics = st.tabs(["🩺 Diagnosis", "📊 Model Metrics"])
+    
+    with tab_diag:
+        # Move previous main code here
+        diag_ui()
+    
+    with tab_metrics:
+        st.header("📈 Training Performance")
+        st.info("Visualizing the learning curve from Phase 1 (Transfer Learning) and Phase 2 (Fine-tuning)")
+        
+        h1_path = 'results/melanom_efficientnetb0_phase1_history.json'
+        h2_path = 'results/melanom_efficientnetb0_phase2_history.json'
+        
+        if os.path.exists(h1_path):
+            plot_training_history(h1_path, h2_path)
+            
+            # Show stats
+            with open(h1_path, 'r') as f:
+                h1 = json.load(f)
+            
+            st.write(f"**Phase 1 Completed:** {len(h1['accuracy'])} epochs")
+            if os.path.exists(h2_path):
+                with open(h2_path, 'r') as f:
+                    h2 = json.load(f)
+                st.write(f"**Phase 2 Completed:** {len(h2['accuracy'])} epochs")
+        else:
+            st.warning("Training history not found. Finish training to see metrics.")
+
     # Sidebar
     with st.sidebar:
         st.header("ℹ️ System Info")
@@ -235,7 +315,9 @@ def main():
         
         st.divider()
         st.markdown("**Status:** Etapa 5 (Trained Model)")
-    
+
+
+def diag_ui():
     # Load model (cached)
     with st.spinner("Loading neural network model..."):
         model = load_nn_model()
@@ -264,7 +346,9 @@ def main():
                 st.stop()
             
             # Display uploaded image
-            st.image(image, caption="Uploaded Image", use_column_width=True, channels='RGB')
+            # Convert BGR (OpenCV) to RGB (Streamlit)
+            image_display = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+            st.image(image_display, caption="Uploaded Image", use_container_width=True)
             
             # Preprocess
             image_preprocessed = preprocess_image(image)
