@@ -116,6 +116,18 @@ def enhance_contrast(image: np.ndarray) -> np.ndarray:
     return cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
 
 
+def sharpen_image(image: np.ndarray) -> np.ndarray:
+    """
+    Aplică un filtru de claritate subtil (Unsharp Masking) pentru a reduce 
+    efectul de blur fără a introduce zgomot excesiv.
+    """
+    # Folosim Gaussian Blur pentru a crea o mască de detaliu
+    blurred = cv2.GaussianBlur(image, (0, 0), 3.0)
+    # Combinăm imaginea originală cu masca pentru sharpening natural
+    sharpened = cv2.addWeighted(image, 1.5, blurred, -0.5, 0)
+    return np.clip(sharpened, 0, 255).astype(np.uint8)
+
+
 def crop_center(image: np.ndarray, crop_size: Tuple[int, int]) -> np.ndarray:
     """
     Decupează centrul imaginii
@@ -139,7 +151,8 @@ def crop_center(image: np.ndarray, crop_size: Tuple[int, int]) -> np.ndarray:
 def preprocess_image(image_path: str, 
                      target_size: Tuple[int, int] = (224, 224),
                      remove_artifacts: bool = True,
-                     enhance: bool = True) -> np.ndarray:
+                     enhance: bool = True,
+                     sharpen: bool = True) -> np.ndarray:
     """
     Pipeline complet de preprocesare pentru o imagine
     
@@ -148,32 +161,36 @@ def preprocess_image(image_path: str,
         target_size: Dimensiunea finală
         remove_artifacts: Dacă să elimine artefactele (păr)
         enhance: Dacă să îmbunătățească contrastul
+        sharpen: Dacă să aplice filtru de claritate
     
     Returns:
-        Imaginea preprocesată și normalizată
+        Imaginea preprocesată și normalizată (RGB)
     """
     # Citire imagine
     image = cv2.imread(image_path)
     if image is None:
         raise ValueError(f"Nu s-a putut citi imaginea: {image_path}")
     
-    # Conversie BGR -> RGB
-    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    # Conversie BGR -> RGB (menținem consistentă cu restul pipeline-ului)
+    # Dar majoritatea funcțiilor de procesare folosesc BGR, deci lucram in BGR pana la final
     
     # Eliminare artefacte (păr, markere)
     if remove_artifacts:
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         image = remove_hair(image)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     
     # Îmbunătățire contrast
     if enhance:
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         image = enhance_contrast(image)
-        image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+        
+    # Sharpening (reducere blur) sau îmbunătățire focus
+    if sharpen:
+        image = sharpen_image(image)
     
     # Redimensionare
     image = resize_image(image, target_size)
+    
+    # Conversie la RGB pentru model
+    image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
     
     # Normalizare
     image = normalize_image(image)
