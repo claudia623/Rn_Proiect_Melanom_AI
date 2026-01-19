@@ -1,15 +1,48 @@
-# ⚠️ FIȘIER MUTAT
+# Modul 3: Web Service / UI - README
 
-Documentația pentru Modul 3 (Web UI) a fost mutată în:
+## Descriere Generală
 
-👉 **`docs/README_Module3_WebUI.md`**
+Interfață web **Streamlit** pentru clasificarea melanomului bazată pe similaritate imagini. Modulul prezintă pipeline-ul complet end-to-end:
 
-Consultă fișierul din docs/ pentru informații complete.
+**Input** → Validate → Preprocess → Feature Extraction (Modul 2) → Similarity Matching (Modul 1) → **Output (Classification)**
 
----
+## Funcționalități
 
-**Motiv:** Organizarea structurii - documentația generală trebuie să fie în folder-ul `docs/`
+### 1. Upload și Validare Imagine
 
+- ✅ Accept JPG/PNG
+- ✅ Verific dimensiuni (100x100 minimum, 2048x2048 maximum)
+- ✅ Blur detection (Laplacian variance > 100)
+- ✅ File size check (max 10MB)
+
+### 2. Feature Extraction
+
+- ✅ Preprocess imagine (224x224, normalizare [0-1])
+- ✅ Extract 256D features cu EfficientNetB0
+- ✅ L2 normalization
+
+### 3. Similarity Matching
+
+- ✅ Compare cu 30+ imagini referință (benign + malignant)
+- ✅ Cosine similarity metric
+- ✅ Aggregate scores (mean, std, min, max)
+
+### 4. Classification
+
+- ✅ Binary classification: BENIGN / MALIGNANT
+- ✅ Confidence score (0-1)
+- ✅ Detailed statistics
+
+### 5. Afișare Rezultate
+
+- ✅ Classification badge (verde/roșu)
+- ✅ Similarity percentages
+- ✅ Top 3 reference images per clasă
+- ✅ Expandable detailed statistics
+
+### 6. Logging
+
+- ✅ CSV log cu predictions (timestamp, filename, scores)
 
 ## Structură Fișiere
 
@@ -18,7 +51,7 @@ src/app/
 ├── __init__.py
 ├── streamlit_ui.py          ← MODUL 3 principal
 ├── utils.py                 ← Utility functions
-└── README_Module3.md        (acest fișier)
+└── README_Module3.md        (documentație tehnică)
 ```
 
 ## Utilizare
@@ -300,8 +333,8 @@ streamlit run src/app/streamlit_ui.py --server.port 8502
 
 ---
 
-**Status:** ✅ Implementat pentru Etapa 4  
+**Status:** ✅ Documentat pentru Etapa 4  
 **Framework:** Streamlit  
 **Backend:** Modul 2 (Neural Network) + Modul 1 (Data)  
 **Autor:** Dumitru Claudia-Stefania  
-**Data:** 09.12.2025
+**Data:** 20.01.2026
