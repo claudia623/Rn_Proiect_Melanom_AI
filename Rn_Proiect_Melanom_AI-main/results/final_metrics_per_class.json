@@ -1,0 +1,24 @@
+{
+  "matched_predictions": 2,
+  "unmatched_predictions_count": 10,
+  "unmatched_examples": [
+    "ISIC_0000039.jpg",
+    "ISIC_0000007.jpg",
+    "ISIC_0000004.jpg",
+    "ISIC_0000173.jpg",
+    "ISIC_0000286.jpg",
+    "ISIC_0000178.jpg",
+    "ISIC_0000045.jpg",
+    "ISIC_0000060.jpg",
+    "ISIC_0000073.jpg",
+    "ISIC_0000146.jpg"
+  ],
+  "TP": 1,
+  "FP": 1,
+  "TN": 0,
+  "FN": 0,
+  "precision_malignant": 0.5,
+  "recall_malignant": 1.0,
+  "precision_benign": 0.0,
+  "recall_benign": 0.0
+}
