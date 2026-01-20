@@ -1,0 +1,33 @@
+isic_id,attribution,copyright_license,age_approx,anatom_site_general,anatom_site_special,concomitant_biopsy,diagnosis_1,diagnosis_2,diagnosis_3,diagnosis_4,diagnosis_confirm_type,image_type,melanocytic,sex
+ISIC_0000002,Anonymous,CC-0,60,upper extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,female
+ISIC_0000004,Anonymous,CC-0,80,posterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,male
+ISIC_0000013,Anonymous,CC-0,30,posterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000022,Anonymous,CC-0,55,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,female
+ISIC_0000026,Anonymous,CC-0,30,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000029,Anonymous,CC-0,45,posterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,female
+ISIC_0000030,Anonymous,CC-0,55,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000031,Anonymous,CC-0,70,upper extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,male
+ISIC_0000035,Anonymous,CC-0,25,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000036,Anonymous,CC-0,70,upper extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,male
+ISIC_0000040,Anonymous,CC-0,65,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000043,Anonymous,CC-0,35,lower extremity,oral or genital,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,male
+ISIC_0000046,Anonymous,CC-0,60,upper extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,female
+ISIC_0000049,Anonymous,CC-0,80,posterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,female
+ISIC_0000054,Anonymous,CC-0,25,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,female
+ISIC_0000056,Anonymous,CC-0,55,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,female
+ISIC_0000070,Anonymous,CC-0,25,anterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,,histopathology,dermoscopic,True,male
+ISIC_0000074,Anonymous,CC-0,25,lower extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,male
+ISIC_0000076,Anonymous,CC-0,55,posterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,"Melanoma Invasive, Nodular",histopathology,dermoscopic,True,male
+ISIC_0000077,Anonymous,CC-0,80,upper extremity,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma Invasive,"Melanoma Invasive, On chronically sun-exposed skin or lentigo maligna melanoma",histopathology,dermoscopic,True,male
+ISIC_0000078,Anonymous,CC-0,85,anterior torso,,True,Malignant,Malignant melanocytic proliferations (Melanoma),Melanoma in situ,,histopathology,dermoscopic,True,male
+ISIC_0000139,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000140,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000141,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000142,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000143,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000144,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000145,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000146,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000147,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000148,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,
+ISIC_0000149,Anonymous,CC-0,,,,True,Malignant,Malignant melanocytic proliferations (Melanoma),"Melanoma, NOS",,histopathology,dermoscopic,True,

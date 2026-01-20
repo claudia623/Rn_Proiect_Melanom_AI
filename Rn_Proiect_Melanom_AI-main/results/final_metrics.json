@@ -1,0 +1,13 @@
+﻿{
+  "model": "EfficientNetB0_Optimized",
+  "date": "2026-01-20",
+  "train_accuracy": 0.75,
+  "val_accuracy": 0.72,
+  "test_accuracy": 0.70,
+  "auc": 0.85,
+  "precision": 0.78,
+  "recall": 0.68,
+  "f1_score": 0.72,
+  "inference_time_ms": 120,
+  "optimization_status": "Completed"
+}

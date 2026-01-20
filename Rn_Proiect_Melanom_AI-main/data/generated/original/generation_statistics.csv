@@ -1,0 +1,2 @@
+total_images,original_images,original_percentage,generated_images,generated_percentage,class_distribution,augmentation_types,timestamp
+158,30,18.9873417721519,128,81.0126582278481,"{'benign': 64, 'malignant': 64}","{'rotation_zoom': 64, 'color': 64}",2025-12-16T14:23:36.531273

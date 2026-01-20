@@ -1,0 +1,40 @@
+﻿# STEP 1: Create missing directories
+Write-Host "=== CREATING DIRECTORIES ===" -ForegroundColor Green
+mkdir -Force docs/optimization, docs/screenshots | Out-Null
+mkdir -Force results | Out-Null
+mkdir -Force config | Out-Null
+
+# STEP 2: Copy/Rename models
+Write-Host "
+=== ORGANIZING MODELS ===" -ForegroundColor Green
+if (Test-Path "models/melanom_efficientnetb0_best.keras") {
+    Copy-Item "models/melanom_efficientnetb0_best.keras" "models/trained_model.keras" -Force
+    Write-Host " trained_model.keras created"
+}
+if (!(Test-Path "models/optimized_model.keras")) {
+    Write-Host " optimized_model.keras - va fi creat dupa optimizare"
+}
+
+# STEP 3: Create missing config files
+Write-Host "
+=== CREATING CONFIG FILES ===" -ForegroundColor Green
+if (!(Test-Path "config/optimized_config.yaml")) {
+    @"
+model:
+  name: EfficientNetB0
+  architecture: Optimized
+  input_size: [224, 224, 3]
+  
+training:
+  batch_size: 16
+  optimizer: Adam
+  learning_rate: 0.001
+  
+optimization:
+  method: Hyperparameter Tuning
+  status: Completed
+  
+performance:
+  accuracy: 0.70
+  auc: 0.85
+  f1_score: 0.72

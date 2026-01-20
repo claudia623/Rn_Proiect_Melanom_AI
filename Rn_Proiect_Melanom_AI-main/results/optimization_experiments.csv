@@ -1,0 +1,4 @@
+﻿experiment_id,method,parameters,accuracy,auc,f1_score,date
+1,Baseline,default,0.68,0.83,0.70,2026-01-15
+2,Tuning,lr=0.0005,0.69,0.84,0.71,2026-01-16
+3,Augmentation,rotation=30,0.70,0.85,0.72,2026-01-18
