@@ -1,0 +1,153 @@
+{
+  "stage": "Etapa_3_Preprocesare",
+  "date_created": "2026-02-11",
+  "image": {
+    "target_size": [
+      224,
+      224
+    ],
+    "color_space": "RGB",
+    "channels": 3,
+    "dtype": "float32",
+    "bit_depth": 32
+  },
+  "normalization": {
+    "method": "ImageNet",
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "scale": "0-1",
+    "description": "ImageNet normalization for EfficientNetB0"
+  },
+  "cropping": {
+    "method": "center_crop",
+    "preserve_aspect": true,
+    "strategy": "crop_center_square_then_resize",
+    "description": "Center crop to preserve lesion in frame"
+  },
+  "augmentation": {
+    "enabled": true,
+    "techniques": [
+      "rotation",
+      "color_jitter",
+      "horizontal_flip",
+      "vertical_flip",
+      "elastic_deformation",
+      "brightness_adjustment",
+      "contrast_adjustment"
+    ],
+    "rotation_range": 30,
+    "brightness_range": [
+      0.8,
+      1.2
+    ],
+    "contrast_range": [
+      0.8,
+      1.2
+    ],
+    "hue_change": [
+      -0.1,
+      0.1
+    ],
+    "saturation_range": [
+      0.8,
+      1.2
+    ],
+    "elastic_alpha": 30,
+    "elastic_sigma": 5,
+    "flip_probability": 0.5,
+    "probability": 0.7
+  },
+  "quality_control": {
+    "blur_detection_enabled": true,
+    "blur_threshold_laplacian": 100,
+    "min_image_dimension": 50,
+    "max_image_size_mb": 10,
+    "required_aspect_ratio_tolerance": 0.1
+  },
+  "pipeline": [
+    "1_load_image",
+    "2_validate_format",
+    "3_blur_check",
+    "4_resize_to_target",
+    "5_normalize_intensity",
+    "6_augment_if_training",
+    "7_convert_to_array",
+    "8_apply_imagenet_normalization",
+    "9_final_validation"
+  ],
+  "dataset": {
+    "source": "ISIC + Personal Dermoscopic Images",
+    "total_samples": 227,
+    "benign_samples": 121,
+    "malignant_samples": 106,
+    "train_split": 0.622,
+    "val_split": 0.14,
+    "test_split": 0.149,
+    "class_imbalance_ratio": 1.14,
+    "augmentation_per_sample": 3
+  },
+  "output": {
+    "array_type": "numpy array",
+    "shape": [
+      null,
+      224,
+      224,
+      3
+    ],
+    "dtype": "float32",
+    "value_range": [
+      0.0,
+      1.0
+    ]
+  },
+  "interpolation": {
+    "resize_method": "bilinear",
+    "description": "Bilinear interpolation preserves details"
+  },
+  "validation": {
+    "check_pixel_values": true,
+    "check_shape": true,
+    "check_dtype": true,
+    "allowed_dtypes": [
+      "float32"
+    ],
+    "expected_shape": [
+      224,
+      224,
+      3
+    ]
+  },
+  "performance": {
+    "batch_processing": true,
+    "batch_size": 32,
+    "num_workers": 4,
+    "prefetch_buffer_size": 32,
+    "cache_preprocessed": false
+  },
+  "hardware": {
+    "device": "CPU/GPU",
+    "mixed_precision": true,
+    "float16_enabled": false,
+    "optimization_level": "O2"
+  },
+  "features": {
+    "color_histogram": false,
+    "texture_features": false,
+    "shape_features": false,
+    "note": "Features extracted by CNN backbone, not hand-crafted"
+  },
+  "reference": {
+    "framework": "TensorFlow Keras",
+    "preprocessing_function": "tensorflow.keras.applications.efficientnet.preprocess_input",
+    "image_loader": "PIL.Image / OpenCV",
+    "augmentation_library": "albumentations"
+  }
+}
