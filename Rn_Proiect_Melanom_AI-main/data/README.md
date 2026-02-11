@@ -1,11 +1,8 @@
-#  Descrierea Setului de Date
-
 ## 1. Sursa Datelor
 
 ### 1.1 Origine
 - **Dataset Principal:** ISIC (International Skin Imaging Collaboration) Archive
 - **URL:** https://www.isic-archive.com/
-- **Alternative Folosite:** HAM10000 Dataset, Kaggle Skin Cancer
 
 ### 1.2 Modul de Achiziție
 -  Descărcat din ISIC Archive (dataset public)
@@ -37,7 +34,7 @@
 | **Validation** | 16 | 16 | **32** | **15%** |
 | **Test** | 16 | 16 | **32** | **15%** |
 
-**Notă:** Dataset ECHILIBRAT (50/50) - nu necesită tehnici speciale de balansare!
+**Notă:** Dataset ECHILIBRAT (50/50) - nu necesită tehnici speciale de balansare.
 
 ### 2.3 Tipuri de Leziuni Incluse
 
@@ -184,7 +181,6 @@ data/
 4. **Kaggle Melanoma:** https://www.kaggle.com/c/siim-isic-melanoma-classification
 
 ### 9.2 Documente Referință în Proiect
-- `../SETUP_INSTRUCTIONS.md` - Instrucțiuni de configurare
 - `../README.md` - Prezentarea proiectului
 - `../src/preprocessing/preprocess_dataset.py` - Cod preprocesare
 - `../config/config.yaml` - Configurații model și training
@@ -195,8 +191,8 @@ data/
 
 ### 10.1 Date de Antrenare Disponibile
 - **Total imagini:** 206 (202 procesate + alte surse)
-- **Dataset echilibrat:**  DA (50% benign, 50% malignant)
-- **Augmentare aplicată:**  DA (pe setul de train)
+- **Dataset echilibrat:**  da (50% benign, 50% malignant)
+- **Augmentare aplicată:**  da (pe setul de train)
 
 ### 10.2 Performanță Așteptată
 Cu EfficientNetB0 și dataset-ul de 206 imagini:
@@ -224,7 +220,6 @@ Cu EfficientNetB0 și dataset-ul de 206 imagini:
 - Dataset perfect echilibrat (50/50)
 - Imagini de calitate înaltă
 - Preprocessing complet (eliminare artefacte, etc.)
-- Split train/val/test respectă principii profesionale
 
 ###  Îmbunătățiri Posibile
 1. Augmentare dataset cu mai multe imagini din ISIC
@@ -234,4 +229,4 @@ Cu EfficientNetB0 și dataset-ul de 206 imagini:
 
 ---
 
-**Ultima Actualizare:** 20 ianuarie 2026  
+**Ultima Actualizare:** 11 februarie 2026  
