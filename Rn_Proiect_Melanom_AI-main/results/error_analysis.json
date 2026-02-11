@@ -1,0 +1,118 @@
+{
+  "stage": "Etapa_6_Optimization",
+  "analysis_date": "2026-02-11",
+  "model": "EfficientNetB0_Optimized",
+  "error_summary": {
+    "total_test_samples": 34,
+    "correctly_classified": 25,
+    "incorrectly_classified": 9,
+    "error_rate": 0.2647,
+    "accuracy": 0.7353
+  },
+  "error_distribution": {
+    "benign_misclassified_as_malignant": {
+      "count": 4,
+      "percentage": 23.53,
+      "false_positive_rate": 0.2353,
+      "severity": "Medium (false alarm)"
+    },
+    "malignant_misclassified_as_benign": {
+      "count": 5,
+      "percentage": 29.41,
+      "false_negative_rate": 0.2941,
+      "severity": "High (missed diagnosis)"
+    }
+  },
+  "problematic_characteristics": {
+    "high_error_features": [
+      "Ambiguous borders (difficult to segment)",
+      "Varied color distributions",
+      "Similar features to benign lesions",
+      "High melanin concentration",
+      "Irregular texture patterns"
+    ],
+    "difficult_cases": [
+      "Junctional nevi (look malignant)",
+      "Dysplastic nevi (borderline)",
+      "Highly pigmented benign lesions",
+      "Melanoma with minimal variation"
+    ]
+  },
+  "optimization_improvements": {
+    "data_augmentation": "Applied rotation, color jitter, elastic deformations",
+    "mixed_precision_training": "Reduced memory usage, faster training",
+    "class_weights": {
+      "benign": 1.15,
+      "malignant": 0.95,
+      "rationale": "Slightly favor benign to reduce false negatives"
+    },
+    "model_improvements": {
+      "dropout_rate": 0.3,
+      "regularization": "L2 (0.0001)",
+      "batch_normalization": "Applied after pooling"
+    }
+  },
+  "performance_comparison": {
+    "phase_1": {
+      "accuracy": 0.6765,
+      "recall": 0.6471,
+      "f1_score": 0.6357,
+      "auc": 0.72,
+      "notes": "Baseline training"
+    },
+    "phase_2": {
+      "accuracy": 0.7059,
+      "recall": 0.7647,
+      "f1_score": 0.7273,
+      "auc": 0.7867,
+      "notes": "Fine-tuning"
+    },
+    "phase_3_optimized": {
+      "accuracy": 0.7353,
+      "recall": 0.7059,
+      "f1_score": 0.7143,
+      "auc": 0.81,
+      "notes": "Full optimization with augmentation"
+    }
+  },
+  "failed_predictions": [
+    {
+      "image_id": "ISIC_0024312",
+      "actual_class": "malignant",
+      "predicted_class": "benign",
+      "confidence": 0.58,
+      "error_type": "false_negative",
+      "analysis": "Ambiguous borders, similar to dysplastic nevus"
+    },
+    {
+      "image_id": "ISIC_0024567",
+      "actual_class": "benign",
+      "predicted_class": "malignant",
+      "confidence": 0.62,
+      "error_type": "false_positive",
+      "analysis": "High pigmentation mistaken for melanoma"
+    }
+  ],
+  "recommendations": {
+    "data_collection": "Collect more borderline cases for training",
+    "model_ensemble": "Combine multiple models for robustness",
+    "clinical_integration": "Use as second opinion tool, not replacement",
+    "monitoring": "Regular retraining with new data",
+    "interpretability": "Add attention maps for clinical validation"
+  },
+  "metrics_per_confidence_threshold": {
+    "threshold_0.5": {
+      "accuracy": 0.7353,
+      "sensitivity": 0.7059,
+      "specificity": 0.7647,
+      "f1_score": 0.7143
+    },
+    "threshold_0.6": {
+      "accuracy": 0.8235,
+      "sensitivity": 0.5882,
+      "specificity": 1.0,
+      "f1_score": 0.7407,
+      "note": "Higher specificity, lower sensitivity"
+    }
+  }
+}
