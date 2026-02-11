@@ -129,7 +129,5 @@ Dumitru Claudia-Stefania
 20 ianuarie 2026
 
 ## Pentru Mai Multe Informatii
-
-- Consultati SETUP_INSTRUCTIONS.md pentru instalare detaliate
 - Vezi docs/ pentru documentatie completa
 - Explore results/ pentru metrici
